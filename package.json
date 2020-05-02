@@ -10,11 +10,13 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/louiscenter/hypercast"
+    "url": "https://github.com/lftherios/hypercast"
   },
   "devDependencies": {
     "electron": "^8.2.3",
-    "prettier": "2.0.5"
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "pretty-quick": "^2.0.1"
   },
   "dependencies": {
     "buffer-to-arraybuffer": "0.0.5",
@@ -27,5 +29,12 @@
     "on-load": "^3.3.4",
     "pump": "^1.0.2",
     "webm-cluster-stream": "^1.0.0"
+  },
+
+  // husky to manage git hooks
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
