@@ -30,8 +30,6 @@
     "pump": "^1.0.2",
     "webm-cluster-stream": "^1.0.0"
   },
-
-  // husky to manage git hooks
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
