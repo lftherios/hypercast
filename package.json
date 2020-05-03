@@ -4,7 +4,8 @@
   "description": "p2p broadcasting for dat:// enabled web browsers",
   "main": "index.js",
   "scripts": {
-    "start": "electron app.js"
+    "start": "electron app.js",
+    "check": "npx eslint --ignore-path .gitignore ."
   },
   "author": "Louis Center (@louiscenter)",
   "license": "MIT",
@@ -13,7 +14,12 @@
     "url": "https://github.com/lftherios/hypercast"
   },
   "devDependencies": {
+<<<<<<< HEAD
     "electron": "^8.2.5",
+=======
+    "electron": "^8.2.3",
+    "eslint": "^6.8.0",
+>>>>>>> master
     "husky": "^4.2.5",
     "prettier": "2.0.5",
     "pretty-quick": "^2.0.1"
@@ -33,7 +39,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "pretty-quick --staged && npm run check"
     }
   }
 }

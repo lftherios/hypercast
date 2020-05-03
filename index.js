@@ -25,7 +25,7 @@ app.use(function (state, emitter) {
     emitter.emit("render");
   });
 
-  emitter.on("broadcast:stop", function (key) {
+  emitter.on("broadcast:stop", function () {
     state.broadcast.peerCount = 0;
     state.broadcast.active = false;
     state.broadcast.key = null;
